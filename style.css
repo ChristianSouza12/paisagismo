@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body, html {
+    margin-top: -1%;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #4a4a48;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: .6s;
+}
+
+.reveal.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imglogo {
+    width: 250px;
+    margin-left: 15%;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transition: .3s;
+    opacity: .7;
+}
+
+.contact-item i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+.tel-info,
+.whats-info,
+.email-info {
+    margin: 0;
+}
+
+.social-icons {
+    margin-left: auto;
+}
+
+.social-icons i {
+    margin-right: 50px;
+    margin-left: 2px;
+    cursor: pointer;
+    color: white;
+    background-color: #789636;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+}
+
+.social-icons i:hover {
+    transition: .3s;
+    opacity: .7;
+}
+
+.quemsomos {
+    width: 100%;
+    margin-top: -6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+
+.quemsomos h3 {
+    position: relative;
+    cursor: pointer;
+}
+
+.quemsomos h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #789636;
+    transition: width 0.3s ease-in-out;
+}
+
+.quemsomos h3:hover::after {
+    width: 100%;
+    transition: .3s;
+    opacity: .7;
+}
+
+h3 {
+    margin-left: 5%;
+}
+
+.img-principal {
+    width: 99.16vw;
+}
+
+.principal img {
+    -webkit-box-shadow: 13px 13px 0px -6px rgba(124, 142, 82, 1);
+    -moz-box-shadow: 13px 13px 0px -6px rgba(124, 142, 82, 1);
+    box-shadow: 13px 13px 0px -6px rgba(124, 142, 82, 1);
+}
+
+#player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal img {
+    width: 350px;
+    margin-top: 4%;
+}
+
+.principal h2 {
+    font-size: 30px;
+    margin-top: -10%;
+    margin-left: 2%;
+    font-family: "Yeseva One", serif;
+    color: #4a4a48;
+}
+
+.principal h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #789636;
+    margin: 2 auto;
+    margin-top: 5px;
+}
+
+.principal p {
+    height: 50px;
+    margin-left: -10%;
+    color: #4a4a48;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    color: #4a4a48;
+}
+
+.serviços {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7%;
+    margin-right: 7%;
+    position: relative;
+}
+
+.titulo-servicos {
+    font-family: "Yeseva One", serif;
+}
+
+.titulo-servicos::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color:#789636;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.servico img {
+    width: 140px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.servico p {
+    text-align: center;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    color: #4a4a48;
+}
+
+.servico p::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #789636;
+    transition: width 0.3s ease-in-out;
+}
+
+.servico:hover p::after {
+    width: 100%;
+}
+
+.servico:hover img {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.servico {
+    margin-bottom: 7%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.imgs-projetos {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    margin: 0 300px;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.imgs-projetos img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    filter: blur(0.8px);
+}
+
+.imgs-projetos img:hover {
+    filter: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.projetos h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Yeseva One", serif;
+    margin-left: -70px;
+    color: #4a4a48;
+}
+
+.projetos h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: #789636;
+    margin-left: -200px;
+    margin-top: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    background-color: #789636;
+    align-items: center;
+    height: 400px;
+    color: white;
+}
+
+footer h2 {
+    font-family: "Yeseva One", serif;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 400;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+.direitos {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4a4a4a;
+    padding: 10px 0;
+    color: white;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10%;
+}
+
+.contact-info2 i {
+    margin-right: 8px;
+    margin-top: 20px;
+}
+
+.tel-info2,
+.whats-info2,
+.email-info2 {
+    margin-left: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tel-info2:hover,
+.whats-info2:hover,
+.email-info2:hover {
+    transform: translateX(20px);
+}
+
+.siganos i {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #789636;
+    background-color: white;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.siganos i:hover {
+    transform: translateX(5px);
+    opacity: 0.7;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+
